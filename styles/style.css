@@ -1,0 +1,476 @@
+html
+{
+    margin: 0;
+    padding: 1px;
+    box-sizing: border-box;
+}
+
+body
+{
+
+    margin: 1px;
+    padding: 0;
+    background-color: rgba(217, 228, 225, 0.445)
+}
+
+.prom
+{
+    margin: 1px;
+    padding: 0 5% 0 10%;
+}
+
+header
+{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    margin: 1px;
+    padding: 1px;
+}
+
+.container
+{
+    margin: 1px;
+    padding: 1px;
+}
+
+.c1
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+.c2
+{
+    border-style: solid;
+    border-width: 1px 2px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.658);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.tab
+{
+    display: flex;   
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+#t1
+{
+    display: flex;
+}
+
+#t2, #t3, #t4, #t5, #t6, #t7
+{
+    display: none;
+}
+
+
+.wrap
+{
+    margin: 1px;
+    padding: 1px;
+}
+
+.dmstrip
+{
+    height: calc(2vh + 0.5 * 2.5vw);
+    border-style: solid;
+    border-width: 1px 1px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.5% 0.1% 0.5%;
+    background-color: rgb(255, 255, 255);
+}
+
+.dm
+{
+    border-style: solid;
+    border-width: 0px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color:  rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 0;
+ 
+}
+
+.l
+{
+    background-color:  rgb(14,25,255);
+    color: aliceblue;
+    width: 2%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.l:hover
+{
+    background-color:  rgb(46,113,255);
+    color: aliceblue;
+}
+
+.btn
+{
+    width: 12%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn:hover
+{
+    background-color:  rgb(46,113,255);
+    color: aliceblue;
+
+}
+
+.r
+{
+    background-color:  rgb(14,25,255);
+    color: aliceblue;
+    width: 2%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.r:hover
+{
+    background-color:  rgb(46,113,255);
+    color: aliceblue;
+}
+
+#dmb1
+{
+    background-color:  rgb(14,25,255);
+    color: aliceblue;
+}
+
+h1
+{
+    font-size: 1vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.addform, .addsess, .delfilm, .delsess, .addimg
+{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    z-index: 99;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(5, 5, 5, 0.5);
+}
+
+.adfc
+{
+    width: 50vw;
+    height: 50vh;
+    padding: 0.9vw;
+    background-color: rgb(233, 233, 233);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: rgb(4, 0, 255);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+}
+
+h6
+{
+    margin: 0;
+    padding: 0.5vw;
+    width: 48vw;
+    font-size: 1vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-style: normal;
+    text-align: left;
+}
+
+#filmname, #filmrating, #filmgenres,
+#filmlasting, #filmtime
+{
+    padding: 0;
+    margin: 0.1vw 1vw 0.1vw 1.5vw;
+    font-size: 0.9vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-style: normal;
+    text-align: left;
+}
+
+#fileselect
+{
+    width: 10vw;
+    height: 10vh;
+    padding: 0.1vw;
+    padding-left: 2vw;
+    margin: 0.1vw 1vw 0.1vw 1.5vw;
+    font-size: 1vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-style: normal;
+    text-align: left;
+    color: rgb(14,25,255);
+    cursor: pointer;
+}
+
+#fileselect:hover
+{
+    color: rgba(5,113,255);
+}
+
+#filmcover
+{
+    display: none;
+}
+
+#btnhldr
+{
+    width: 25vw;
+    padding: 0;
+    margin: 0.5vw 1vw 1.5vw 15vw;
+}
+
+#submit, #submit2, #submit3, #submit4, #submit5
+{
+    width: 10vw;
+    height: 1.5vw;
+    font-size: 1vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color:rgb(255, 255, 255);
+    background-color: rgb(14,25,255);
+    border-radius: 5px;
+    border-color: rgba(5,113,255);
+    margin: 0.5vh;
+    cursor: pointer;
+}
+
+#cancel, #cancel2, #cancel3, #cancel4, #cancel5
+{
+    width: 10vw;
+    height: 1.5vw;
+    font-size: 1vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color:rgb(255, 255, 255);
+    background-color: rgb(14,25,255);
+    border-radius: 5px;
+    border-color: rgba(5,113,255);
+    margin: 0.5vh;
+    cursor: pointer;
+}
+
+.filmcard
+{
+    margin: 0.5%;
+    height: 30vh;
+    display: flex;   
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color:black;
+}
+
+.imgholder
+{
+    margin: 0;
+    padding: 0;
+    width: 20vw;
+    height: 30vh;
+    border-radius: 10px 0 0 10px;
+    background-color: black;
+}
+
+#img1
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.filminfo
+{
+    margin: 0;
+    padding: 2%;
+    width: 40vw;
+    max-width: 40vw;
+    border-style: none none none solid;
+    border-width: 1px;
+    border-color:black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    background-color: rgba(198, 206, 206, 0.24);
+}
+
+.filmctrl
+{
+    margin: 0;
+    padding: 0.5%;
+    border-style: none none none solid;
+    border-width: 1px;
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: rgba(168, 211, 211, 0.322);
+}
+
+h2
+{
+    width: 20vw;
+    font-size: 2vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-style: normal;
+    text-align: left;
+    margin: 0;
+}
+
+h3
+{
+    width: 18vw;
+    font-size: 1.5vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    text-align: right;
+    margin: 0;
+}
+
+h4
+{
+    width: 18vw;
+    font-size: 1.5vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    text-align: right;
+    margin: 0;
+}
+
+p
+{
+    width: 20vw;
+    font-size: 1.5vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-style: normal;
+    text-align: left;
+    margin: 0;
+}
+
+.addbtn
+{
+    width: 2vw;
+    height: 2vw;
+    font-size: 1.5vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color:rgb(16, 50, 124);
+    background-color: rgb(46,113,255);
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0.5vw;
+}
+
+.delfbtn
+{
+    width: 2vw;
+    height: 2vw;
+    font-size: 1.5vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color:rgba(97, 6, 41, 0.995);
+    background-color: rgba(233, 95, 148, 0.995);
+    border-radius: 5px;
+    border-color: rgba(143, 57, 90, 0.995);
+    cursor: pointer;
+    margin: 0.5vw;
+}
+
+.deletebtn
+{
+    width: 1.5vw;
+    height: 1.5vw;
+    font-size: 1vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color:rgba(97, 6, 41, 0.995);
+    background-color: rgba(233, 95, 148, 0.995);
+    border-radius: 5px;
+    border-color: rgba(143, 57, 90, 0.995);
+    margin: 0.5vh;
+    cursor: pointer;
+}
+
+.chngbtn
+{
+    width: 1.5vw;
+    height: 1.5vw;
+    font-size: 1vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color:rgba(2, 68, 145, 0.995);
+    background-color: rgba(98, 127, 209, 0.995);
+    border-radius: 5px;
+    border-color: rgba(10, 64, 126, 0.995);
+    margin: 0.5vh;
+    cursor: pointer;
+}
+
+.imgbtn
+{
+    width: 1.5vw;
+    height: 1.5vw;
+    font-size: 1vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color:rgba(2, 145, 9, 0.995);
+    background-color: rgba(120, 209, 98, 0.995);
+    border-radius: 5px;
+    border-color: rgba(20, 126, 10, 0.995);
+    margin: 0.5vh;
+    cursor: pointer;
+}
+
+@keyframes fin {
+from {
+    opacity: 100%;
+    scale: 1;
+}   
+to {
+    opacity: 100%;
+    scale: 1;
+}
+50% {
+    opacity: 0%;
+    scale: 0.5;
+}
+}

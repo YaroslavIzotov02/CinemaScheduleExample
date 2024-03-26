@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Расписание</title>
+        <meta charset="utf-8" lang="ru">
+        <link rel = "stylesheet" type = "text/css" href = "../styles/style.css">
+        <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="script.js"></script>
+    </head>
+    <body>
+        <div class="delfilm">
+            <div class="adfc">
+                <h6>Выберите название фильма</h6>
+                <select id="filmdel">
+                <option disabled>Выберите фильм</option>
+                </select>
+                <div id="btnhldr">
+                <button id="submit4">Удалить</button>
+                <button id="cancel4">Отмена</button>
+                </div>
+            </div>
+        </div>
+        <div class="delsess">
+            <div class="adfc">
+                <h6>Выберите сессию для этого фильма</h6>
+                <select id="sesdel">
+                <option disabled>Выберите сессию</option>
+                </select>
+                <div id="btnhldr">
+                <button id="submit3">Удалить</button>
+                <button id="cancel3">Отмена</button>
+                </div>
+            </div>
+        </div>
+        <div class="addimg">
+            <div class="adfc">
+                <h6>Обложка</h6>
+                <label id="fileselect">
+                Выберите файл
+                <input type="file" id="filmcover" accept="image/png"></input>
+                </label>
+                <div id="btnhldr">
+                <button id="submit5">Подтвердить</button>
+                <button id="cancel5">Отмена</button>
+                </div>
+            </div>
+        </div>
+        <div class="addsess">
+            <div class="adfc">
+                <h6>Время сеанса</h6>
+                <input type="time" id="filmtime" name="appt" min="00:00" max="23:59" placeholder="13:30"></input>
+                <div id="btnhldr">
+                <button id="submit2">Подтвердить</button>
+                <button id="cancel2">Отмена</button>
+                </div>
+            </div>
+        </div>
+        <div class="addform">
+            <div class="adfc">
+                <h6>Название фильма</h6>
+                <input type="text" id = "filmname" list="filmnamesss" placeholder="Название"></input>
+                <datalist id="filmnamesss">
+                </datalist>
+                <h6>Возрастной рейтинг</h6>
+                <input type="text" id="filmrating" pattern="\d*" oninput="this.value=this.value.replace(/\D/g,'')" minlength="1" maxlength="2" placeholder="18"></input>
+                <h6>Жанр(ы)</h6>
+                <input type="text" id="filmgenres" placeholder="Жанр, жанр, жанр, жанр" oninput="validateInput(this)"> </input>
+                <script>
+                        function validateInput(input) {
+                        input.value = input.value.replace(/[^а-яА-ЯёЁ,\s]/g, '');
+                        }
+                </script>
+                <h6>Продолжительность (в минутах)</h6>
+                <input type="text" id = "filmlasting" pattern="\d*" oninput="this.value=this.value.replace(/\D/g,'')" minlength="1" maxlength="3" placeholder="100"></input>
+                <div id="btnhldr">
+                <button id="submit">Подтвердить</button>
+                <button id="cancel">Отмена</button>
+                </div>
+            </div>
+        </div>
+        <div class="prom">
+        <header>
+            <div class="container c1">
+                <div class="dmstrip">
+                    <div class="dm l">
+                        <h1>
+                            &lt;
+                        </h1>
+                    </div>
+                    <div class="dm btn" id = "dmb1">
+                        <h1>
+                            {{dmt1}}
+                        </h1>
+                    </div>
+                    <div class="dm btn" id = "dmb2">
+                        <h1>
+                            {{dmt2}}
+                        </h1>
+                    </div>
+                    <div class="dm btn" id = "dmb3">
+                        <h1>
+                            {{dmt3}}
+                        </h1>
+                    </div>
+                    <div class="dm btn" id = "dmb4">
+                        <h1>
+                            {{dmt4}}
+                        </h1>
+                    </div>
+                    <div class="dm btn" id = "dmb5">
+                        <h1>
+                            {{dmt5}}
+                        </h1>
+                    </div>
+                    <div class="dm btn" id = "dmb6">
+                        <h1>
+                            {{dmt6}}
+                        </h1>
+                    </div>
+                    <div class="dm btn" id = "dmb7">
+                        <h1>
+                            {{dmt7}}
+                        </h1>
+                    </div>
+                    <div class="dm r">
+                        <h1>
+                            &gt;
+                        </h1>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container c2">
+                <div class="tab" id="t1">
+                    <div class="wrap">
+                        
+                    </div>
+                    <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+                        <button class="addbtn">+</button>
+                        <button class="delfbtn">-</button>
+                        </div>
+                </div>
+                <div class="tab" id="t2">
+                    <div class="wrap">
+
+                    </div>
+                    <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+                        <button class="addbtn">+</button>
+                        <button class="delfbtn">-</button>
+                        </div>
+                </div>
+                <div class="tab" id="t3">
+                    <div class="wrap">
+
+                    </div>
+                    <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+                        <button class="addbtn">+</button>
+                        <button class="delfbtn">-</button>
+                        </div>
+                </div>
+                <div class="tab" id="t4">
+                    <div class="wrap">
+
+                    </div>
+                    <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+                        <button class="addbtn">+</button>
+                        <button class="delfbtn">-</button>
+                        </div>
+                </div>
+                <div class="tab" id="t5">
+                    <div class="wrap">
+
+                    </div>
+                    <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+                        <button class="addbtn">+</button>
+                        <button class="delfbtn">-</button>
+                        </div>
+                </div>
+                <div class="tab" id="t6">
+                    <div class="wrap">
+
+                    </div>
+                    <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+                        <button class="addbtn">+</button>
+                        <button class="delfbtn">-</button>
+                        </div>
+                </div>
+                <div class="tab" id="t7">
+                    <div class="wrap">
+
+                    </div>
+                    <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+                    <button class="addbtn">+</button>
+                    <button class="delfbtn">-</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        </div>
+    </body>
+</html>
