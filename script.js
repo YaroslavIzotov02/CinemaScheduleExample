@@ -207,8 +207,10 @@ $(function () {
         
             let sessionstruct = {
                 "film_id": IDs[tmp],
-                "date" : dateNow.toISOString().split('T')[0] + 'T' + $('#filmtime').val() + ':00'
+                "date" : DateAdd(curt-1).toISOString().split('T')[0] + 'T' + $('#filmtime').val() + ':00'
             };
+
+            
 
             if ($("#fc"+tmp).children("#info").children("#times").text() != '')
             {
