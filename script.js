@@ -5,6 +5,9 @@ var dict;
 var IDs = new Array('');
 var SIDs = [];
 var filNS = new Array('');
+const imgdict = {
+    zerocond: 'zero condition for initialization'
+}
 
 const Days = { 0: 'Воскресенье', 1: 'Понедельник', 2: 'Вторник', 3: 'Среда', 4: 'Четверг', 5: 'Пятница', 6: 'Суббота' };
 
@@ -467,26 +470,35 @@ function getFilms(dateee) {
                     }
                 }
             }
-        
+            
             for (let s = 1; s < IDs.length; s++) {
-                try{
-                fetch(`http://localhost:8000/api/film/${IDs[s]}/preview`,
+                if (IDs[s] in imgdict)
                 {
-                    mode: 'cors',
-                    method: 'GET' 
+                    $('#img' + s).attr('src', 'data:image/png;base64,' + imgdict[IDs[s]]);
                 }
-                ).then(function (response) {
-                    return response.json();
-                })
-                .then(function (data) {
-                    var img = data.data;
-                    $('#img' + s).attr('src', 'data:image/png;base64,' + img);
-                })
+                else
+                {
+                    try{
+                    fetch(`http://localhost:8000/api/film/${IDs[s]}/preview`,
+                    {
+                        mode: 'cors',
+                        method: 'GET' 
+                    }
+                    ).then(function (response) {
+                        return response.json();
+                    })
+                    .then(function (data) {
+                        var img = data.data;
+                        $('#img' + s).attr('src', 'data:image/png;base64,' + img);
+                        imgdict[IDs[s]] = img; 
+                    })
+                    }
+                    catch {
+                        $('#img' + s).attr('src', 'placeholder.png');
+                    }
+                }
             }
-            catch {
-                $('#img' + s).attr('src', 'placeholder.png');
-            }
-            }
+            console.log(imgdict);
         })
 }
 
