@@ -564,3 +564,22 @@ $(function () {
         $("#dmb" + curt).trigger('click');
     })
 })
+
+$(function () {
+    $(document).on('click', '.printbtn', function ()
+    {
+        for(let j = 1; j < 8; ++j) {
+            if (j == curt)
+            {
+                $('#dmb' + j).css('display', 'block');
+                $('#dmb' + j).css('color', 'black');                 
+            }
+            else
+            {
+                $('#dmb' + j).css('display', 'none');
+            }
+        }
+        window.print();
+        location.reload(true);
+    })
+})
